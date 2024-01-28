@@ -1,0 +1,1391 @@
+{
+	"info": {
+		"_postman_id": "31c26a7f-baff-4951-ab7a-ff091bd52366",
+		"name": "LotteryGameTestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23359800"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mikhail.d.savin@gmail.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{lottery}}/api/users/register",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mikhail.d.savin@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lottery}}/api/users/register",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 11:33:07 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 101,\n        \"email\": \"mikhail.d.savin@gmail.com\"\n    },\n    \"message\": \"User created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mikhail.d.savin@gmail.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{lottery}}/api/login",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mikhail.d.savin@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lottery}}/api/login",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 11:33:42 GMT"
+						},
+						{
+							"key": "Authorization",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgzODMvYXBpL2xvZ2luIiwiaWF0IjoxNzA2NDQxNjIyLCJleHAiOjE3MDY0NDUyMjIsIm5iZiI6MTcwNjQ0MTYyMiwianRpIjoiVzU4N2lyTnBjOGxaeDdxNSIsInN1YiI6IjEwMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.fBj7PRpXnd_uYe6EMpf8dO-7N0JODo3AXmRpTgBtjdQ"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"token_type\": \"Bearer\",\n        \"expires_in\": 3600\n    },\n    \"message\": \"User authenticated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "edit user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Mikeklj\",\n    \"last_name\": \"some name here\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{lottery}}/api/users/103",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"103"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit user",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Mikeklj\",\n    \"last_name\": \"some name here\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lottery}}/api/users/101",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"101"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 11:42:58 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 101,\n        \"first_name\": \"Mikeklj\",\n        \"last_name\": \"some name here\",\n        \"email\": \"mikhail.d.savin@gmail.com\",\n        \"is_admin\": false,\n        \"updated_at\": \"2024-01-28T11:39:42.000000Z\"\n    },\n    \"message\": \"User updated successfully\"\n}"
+				},
+				{
+					"name": "edit user",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Mikeklj\",\n    \"last_name\": \"some name here\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lottery}}/api/users/103",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"103"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 12:06:11 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [],\n    \"message\": \"You are not authorized to perform this action.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{lottery}}/api/users/101",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"101"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete user",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{lottery}}/api/users/101",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"101"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 11:43:14 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [],\n    \"message\": \"You are not authorized to perform this action.\"\n}"
+				},
+				{
+					"name": "delete user",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{lottery}}/api/users/101",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"101"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 11:43:36 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 101\n    },\n    \"message\": \"User deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get games",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{lottery}}/api/lottery_games",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"lottery_games"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get games",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lottery}}/api/lottery_games",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"lottery_games"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 12:06:32 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"cumque\",\n            \"gamer_count\": 23,\n            \"reward_points\": 515,\n            \"matches\": [\n                {\n                    \"id\": 55,\n                    \"start_date\": \"2018-11-02\",\n                    \"start_time\": \"22:04:52\",\n                    \"winner_id\": 99,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 6,\n                    \"start_date\": \"2014-12-14\",\n                    \"start_time\": \"01:21:39\",\n                    \"winner_id\": 25,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 95,\n                    \"start_date\": \"2006-04-17\",\n                    \"start_time\": \"11:45:51\",\n                    \"winner_id\": 5,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 24,\n                    \"start_date\": \"1977-11-16\",\n                    \"start_time\": \"03:35:32\",\n                    \"winner_id\": 33,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"molestias\",\n            \"gamer_count\": 10,\n            \"reward_points\": 568,\n            \"matches\": [\n                {\n                    \"id\": 87,\n                    \"start_date\": \"2020-10-05\",\n                    \"start_time\": \"08:36:54\",\n                    \"winner_id\": 45,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 52,\n                    \"start_date\": \"2005-05-16\",\n                    \"start_time\": \"08:57:18\",\n                    \"winner_id\": 68,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 20,\n                    \"start_date\": \"1998-09-03\",\n                    \"start_time\": \"11:40:38\",\n                    \"winner_id\": 6,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 42,\n                    \"start_date\": \"1993-04-28\",\n                    \"start_time\": \"03:26:08\",\n                    \"winner_id\": 46,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 88,\n                    \"start_date\": \"1976-04-03\",\n                    \"start_time\": \"19:09:11\",\n                    \"winner_id\": 57,\n                    \"is_finished\": false\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"in\",\n            \"gamer_count\": 1,\n            \"reward_points\": 717,\n            \"matches\": [\n                {\n                    \"id\": 46,\n                    \"start_date\": \"2020-10-08\",\n                    \"start_time\": \"01:40:04\",\n                    \"winner_id\": 79,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 38,\n                    \"start_date\": \"2004-12-04\",\n                    \"start_time\": \"12:47:23\",\n                    \"winner_id\": 93,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 83,\n                    \"start_date\": \"2001-09-13\",\n                    \"start_time\": \"10:10:35\",\n                    \"winner_id\": 33,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 66,\n                    \"start_date\": \"1992-11-04\",\n                    \"start_time\": \"10:17:49\",\n                    \"winner_id\": 59,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 67,\n                    \"start_date\": \"1980-07-15\",\n                    \"start_time\": \"00:20:38\",\n                    \"winner_id\": 50,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 28,\n                    \"start_date\": \"1971-07-07\",\n                    \"start_time\": \"12:54:19\",\n                    \"winner_id\": 98,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"name\": \"saepe\",\n            \"gamer_count\": 7,\n            \"reward_points\": 827,\n            \"matches\": [\n                {\n                    \"id\": 99,\n                    \"start_date\": \"2009-08-13\",\n                    \"start_time\": \"04:23:07\",\n                    \"winner_id\": 30,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 91,\n                    \"start_date\": \"2008-04-28\",\n                    \"start_time\": \"20:12:30\",\n                    \"winner_id\": 16,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 2,\n                    \"start_date\": \"1999-12-10\",\n                    \"start_time\": \"22:39:54\",\n                    \"winner_id\": 32,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 57,\n                    \"start_date\": \"1974-11-03\",\n                    \"start_time\": \"10:53:23\",\n                    \"winner_id\": 44,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"name\": \"velit\",\n            \"gamer_count\": 12,\n            \"reward_points\": 817,\n            \"matches\": [\n                {\n                    \"id\": 98,\n                    \"start_date\": \"2021-11-07\",\n                    \"start_time\": \"22:43:13\",\n                    \"winner_id\": 46,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 58,\n                    \"start_date\": \"2014-04-10\",\n                    \"start_time\": \"21:59:18\",\n                    \"winner_id\": 89,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"name\": \"ad\",\n            \"gamer_count\": 7,\n            \"reward_points\": 159,\n            \"matches\": [\n                {\n                    \"id\": 14,\n                    \"start_date\": \"2011-06-01\",\n                    \"start_time\": \"09:45:08\",\n                    \"winner_id\": 3,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 72,\n                    \"start_date\": \"2005-01-13\",\n                    \"start_time\": \"13:59:50\",\n                    \"winner_id\": 3,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 17,\n                    \"start_date\": \"2002-01-09\",\n                    \"start_time\": \"20:11:03\",\n                    \"winner_id\": 79,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 23,\n                    \"start_date\": \"1993-04-25\",\n                    \"start_time\": \"03:50:15\",\n                    \"winner_id\": 40,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 54,\n                    \"start_date\": \"1970-11-02\",\n                    \"start_time\": \"15:55:27\",\n                    \"winner_id\": 40,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 7,\n            \"name\": \"impedit\",\n            \"gamer_count\": 13,\n            \"reward_points\": 192,\n            \"matches\": [\n                {\n                    \"id\": 92,\n                    \"start_date\": \"2005-03-22\",\n                    \"start_time\": \"17:22:05\",\n                    \"winner_id\": 64,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 59,\n                    \"start_date\": \"1994-09-18\",\n                    \"start_time\": \"03:16:54\",\n                    \"winner_id\": 31,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 27,\n                    \"start_date\": \"1979-03-21\",\n                    \"start_time\": \"07:33:26\",\n                    \"winner_id\": 69,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 34,\n                    \"start_date\": \"1975-10-26\",\n                    \"start_time\": \"05:38:48\",\n                    \"winner_id\": 63,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 70,\n                    \"start_date\": \"1973-04-19\",\n                    \"start_time\": \"07:21:59\",\n                    \"winner_id\": 71,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 8,\n            \"name\": \"ratione\",\n            \"gamer_count\": 21,\n            \"reward_points\": 278,\n            \"matches\": [\n                {\n                    \"id\": 13,\n                    \"start_date\": \"2011-07-31\",\n                    \"start_time\": \"16:30:34\",\n                    \"winner_id\": 51,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 15,\n                    \"start_date\": \"2002-10-18\",\n                    \"start_time\": \"15:46:04\",\n                    \"winner_id\": 89,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 30,\n                    \"start_date\": \"1999-07-16\",\n                    \"start_time\": \"09:31:02\",\n                    \"winner_id\": 28,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 33,\n                    \"start_date\": \"1994-12-16\",\n                    \"start_time\": \"13:10:48\",\n                    \"winner_id\": 92,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 71,\n                    \"start_date\": \"1990-04-05\",\n                    \"start_time\": \"08:24:00\",\n                    \"winner_id\": 99,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 62,\n                    \"start_date\": \"1979-02-17\",\n                    \"start_time\": \"08:36:11\",\n                    \"winner_id\": 45,\n                    \"is_finished\": false\n                }\n            ]\n        },\n        {\n            \"id\": 9,\n            \"name\": \"eaque\",\n            \"gamer_count\": 15,\n            \"reward_points\": 614,\n            \"matches\": [\n                {\n                    \"id\": 31,\n                    \"start_date\": \"2022-09-27\",\n                    \"start_time\": \"21:51:39\",\n                    \"winner_id\": 78,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 79,\n                    \"start_date\": \"2005-09-01\",\n                    \"start_time\": \"11:35:52\",\n                    \"winner_id\": 14,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 8,\n                    \"start_date\": \"2004-04-15\",\n                    \"start_time\": \"00:26:49\",\n                    \"winner_id\": 32,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 36,\n                    \"start_date\": \"2002-05-17\",\n                    \"start_time\": \"07:34:54\",\n                    \"winner_id\": 99,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 11,\n                    \"start_date\": \"1994-05-08\",\n                    \"start_time\": \"03:56:50\",\n                    \"winner_id\": 12,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 82,\n                    \"start_date\": \"1988-09-13\",\n                    \"start_time\": \"14:13:31\",\n                    \"winner_id\": 74,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 49,\n                    \"start_date\": \"1977-10-04\",\n                    \"start_time\": \"01:55:19\",\n                    \"winner_id\": 9,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 7,\n                    \"start_date\": \"1974-08-27\",\n                    \"start_time\": \"14:08:55\",\n                    \"winner_id\": 54,\n                    \"is_finished\": false\n                }\n            ]\n        },\n        {\n            \"id\": 10,\n            \"name\": \"repellat\",\n            \"gamer_count\": 19,\n            \"reward_points\": 823,\n            \"matches\": [\n                {\n                    \"id\": 50,\n                    \"start_date\": \"2021-06-19\",\n                    \"start_time\": \"10:59:21\",\n                    \"winner_id\": 45,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 18,\n                    \"start_date\": \"2011-06-19\",\n                    \"start_time\": \"03:54:16\",\n                    \"winner_id\": 69,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 97,\n                    \"start_date\": \"2004-03-14\",\n                    \"start_time\": \"21:55:42\",\n                    \"winner_id\": 80,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 77,\n                    \"start_date\": \"1985-01-31\",\n                    \"start_time\": \"05:52:24\",\n                    \"winner_id\": 98,\n                    \"is_finished\": false\n                }\n            ]\n        },\n        {\n            \"id\": 11,\n            \"name\": \"qui\",\n            \"gamer_count\": 22,\n            \"reward_points\": 848,\n            \"matches\": [\n                {\n                    \"id\": 65,\n                    \"start_date\": \"2023-09-03\",\n                    \"start_time\": \"20:11:59\",\n                    \"winner_id\": 52,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 56,\n                    \"start_date\": \"2016-04-02\",\n                    \"start_time\": \"05:36:00\",\n                    \"winner_id\": 95,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 81,\n                    \"start_date\": \"2008-09-29\",\n                    \"start_time\": \"09:56:59\",\n                    \"winner_id\": 53,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 76,\n                    \"start_date\": \"2004-10-25\",\n                    \"start_time\": \"05:48:02\",\n                    \"winner_id\": 87,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 100,\n                    \"start_date\": \"2000-09-27\",\n                    \"start_time\": \"20:16:44\",\n                    \"winner_id\": 88,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 45,\n                    \"start_date\": \"1986-10-29\",\n                    \"start_time\": \"22:55:23\",\n                    \"winner_id\": 61,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 16,\n                    \"start_date\": \"1982-02-08\",\n                    \"start_time\": \"16:08:58\",\n                    \"winner_id\": 95,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 26,\n                    \"start_date\": \"1981-06-14\",\n                    \"start_time\": \"14:11:38\",\n                    \"winner_id\": 14,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 12,\n            \"name\": \"sed\",\n            \"gamer_count\": 25,\n            \"reward_points\": 528,\n            \"matches\": [\n                {\n                    \"id\": 48,\n                    \"start_date\": \"2023-12-28\",\n                    \"start_time\": \"04:36:05\",\n                    \"winner_id\": 99,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 22,\n                    \"start_date\": \"2019-08-24\",\n                    \"start_time\": \"14:57:40\",\n                    \"winner_id\": 78,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 78,\n                    \"start_date\": \"2018-01-19\",\n                    \"start_time\": \"17:10:07\",\n                    \"winner_id\": 12,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 61,\n                    \"start_date\": \"2005-10-26\",\n                    \"start_time\": \"18:21:26\",\n                    \"winner_id\": 67,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 1,\n                    \"start_date\": \"2005-05-05\",\n                    \"start_time\": \"23:40:06\",\n                    \"winner_id\": 61,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 94,\n                    \"start_date\": \"1981-09-12\",\n                    \"start_time\": \"22:37:45\",\n                    \"winner_id\": 39,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 37,\n                    \"start_date\": \"1979-12-22\",\n                    \"start_time\": \"08:22:03\",\n                    \"winner_id\": 18,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 84,\n                    \"start_date\": \"1976-01-14\",\n                    \"start_time\": \"12:55:15\",\n                    \"winner_id\": 67,\n                    \"is_finished\": false\n                }\n            ]\n        },\n        {\n            \"id\": 13,\n            \"name\": \"vel\",\n            \"gamer_count\": 17,\n            \"reward_points\": 690,\n            \"matches\": [\n                {\n                    \"id\": 63,\n                    \"start_date\": \"2020-11-13\",\n                    \"start_time\": \"05:48:59\",\n                    \"winner_id\": 21,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 75,\n                    \"start_date\": \"2019-06-03\",\n                    \"start_time\": \"07:39:35\",\n                    \"winner_id\": 36,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 86,\n                    \"start_date\": \"2019-02-04\",\n                    \"start_time\": \"14:52:53\",\n                    \"winner_id\": 77,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 96,\n                    \"start_date\": \"2014-11-27\",\n                    \"start_time\": \"21:55:15\",\n                    \"winner_id\": 38,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 3,\n                    \"start_date\": \"2006-01-04\",\n                    \"start_time\": \"04:15:31\",\n                    \"winner_id\": 42,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 21,\n                    \"start_date\": \"1996-11-24\",\n                    \"start_time\": \"17:51:22\",\n                    \"winner_id\": 5,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 32,\n                    \"start_date\": \"1986-06-07\",\n                    \"start_time\": \"04:47:52\",\n                    \"winner_id\": 2,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 9,\n                    \"start_date\": \"1974-12-06\",\n                    \"start_time\": \"15:08:50\",\n                    \"winner_id\": 32,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 14,\n            \"name\": \"error\",\n            \"gamer_count\": 21,\n            \"reward_points\": 816,\n            \"matches\": [\n                {\n                    \"id\": 51,\n                    \"start_date\": \"2023-06-12\",\n                    \"start_time\": \"19:59:55\",\n                    \"winner_id\": 42,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 73,\n                    \"start_date\": \"2022-08-16\",\n                    \"start_time\": \"02:00:31\",\n                    \"winner_id\": 31,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 29,\n                    \"start_date\": \"2015-11-09\",\n                    \"start_time\": \"19:20:59\",\n                    \"winner_id\": 74,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 47,\n                    \"start_date\": \"2010-02-08\",\n                    \"start_time\": \"17:08:03\",\n                    \"winner_id\": 70,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 25,\n                    \"start_date\": \"2000-12-01\",\n                    \"start_time\": \"08:20:56\",\n                    \"winner_id\": 29,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 93,\n                    \"start_date\": \"1974-06-14\",\n                    \"start_time\": \"10:54:47\",\n                    \"winner_id\": 57,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 10,\n                    \"start_date\": \"1970-04-07\",\n                    \"start_time\": \"11:24:35\",\n                    \"winner_id\": 10,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 15,\n            \"name\": \"fuga\",\n            \"gamer_count\": 11,\n            \"reward_points\": 896,\n            \"matches\": [\n                {\n                    \"id\": 35,\n                    \"start_date\": \"2016-01-13\",\n                    \"start_time\": \"13:24:33\",\n                    \"winner_id\": 26,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 43,\n                    \"start_date\": \"2007-08-04\",\n                    \"start_time\": \"13:40:38\",\n                    \"winner_id\": 41,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 5,\n                    \"start_date\": \"1990-07-27\",\n                    \"start_time\": \"14:48:45\",\n                    \"winner_id\": 62,\n                    \"is_finished\": false\n                }\n            ]\n        },\n        {\n            \"id\": 16,\n            \"name\": \"deserunt\",\n            \"gamer_count\": 18,\n            \"reward_points\": 996,\n            \"matches\": [\n                {\n                    \"id\": 89,\n                    \"start_date\": \"2013-04-10\",\n                    \"start_time\": \"06:11:24\",\n                    \"winner_id\": 76,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 40,\n                    \"start_date\": \"1994-07-21\",\n                    \"start_time\": \"00:03:57\",\n                    \"winner_id\": 6,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 19,\n                    \"start_date\": \"1993-09-05\",\n                    \"start_time\": \"13:12:12\",\n                    \"winner_id\": 32,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 4,\n                    \"start_date\": \"1982-04-03\",\n                    \"start_time\": \"08:15:25\",\n                    \"winner_id\": 33,\n                    \"is_finished\": false\n                }\n            ]\n        },\n        {\n            \"id\": 17,\n            \"name\": \"optio\",\n            \"gamer_count\": 19,\n            \"reward_points\": 498,\n            \"matches\": []\n        },\n        {\n            \"id\": 18,\n            \"name\": \"qui\",\n            \"gamer_count\": 27,\n            \"reward_points\": 546,\n            \"matches\": [\n                {\n                    \"id\": 74,\n                    \"start_date\": \"2015-03-18\",\n                    \"start_time\": \"01:35:40\",\n                    \"winner_id\": 99,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 69,\n                    \"start_date\": \"2008-03-30\",\n                    \"start_time\": \"14:38:24\",\n                    \"winner_id\": 38,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 60,\n                    \"start_date\": \"1989-06-11\",\n                    \"start_time\": \"00:48:35\",\n                    \"winner_id\": 8,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 80,\n                    \"start_date\": \"1979-04-24\",\n                    \"start_time\": \"11:21:07\",\n                    \"winner_id\": 8,\n                    \"is_finished\": false\n                }\n            ]\n        },\n        {\n            \"id\": 19,\n            \"name\": \"sed\",\n            \"gamer_count\": 10,\n            \"reward_points\": 348,\n            \"matches\": [\n                {\n                    \"id\": 53,\n                    \"start_date\": \"2019-03-11\",\n                    \"start_time\": \"16:33:33\",\n                    \"winner_id\": 25,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 64,\n                    \"start_date\": \"1994-05-08\",\n                    \"start_time\": \"20:00:44\",\n                    \"winner_id\": 82,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 39,\n                    \"start_date\": \"1976-03-05\",\n                    \"start_time\": \"12:46:47\",\n                    \"winner_id\": 70,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 20,\n            \"name\": \"enim\",\n            \"gamer_count\": 21,\n            \"reward_points\": 341,\n            \"matches\": [\n                {\n                    \"id\": 44,\n                    \"start_date\": \"2017-02-16\",\n                    \"start_time\": \"15:53:08\",\n                    \"winner_id\": 85,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 41,\n                    \"start_date\": \"2004-06-07\",\n                    \"start_time\": \"13:11:29\",\n                    \"winner_id\": 13,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 68,\n                    \"start_date\": \"2003-06-27\",\n                    \"start_time\": \"05:37:41\",\n                    \"winner_id\": 49,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 90,\n                    \"start_date\": \"1996-03-01\",\n                    \"start_time\": \"09:14:09\",\n                    \"winner_id\": 85,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 12,\n                    \"start_date\": \"1975-05-29\",\n                    \"start_time\": \"21:03:11\",\n                    \"winner_id\": 21,\n                    \"is_finished\": false\n                },\n                {\n                    \"id\": 85,\n                    \"start_date\": \"1972-09-04\",\n                    \"start_time\": \"21:55:53\",\n                    \"winner_id\": 35,\n                    \"is_finished\": true\n                }\n            ]\n        }\n    ],\n    \"message\": \"Data retrieved successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create match",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"gameId\": \"20\",\n    \"startDate\": \"2024-01-29\",\n    \"startTime\": \"13:30:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{lottery}}/api/lottery_game_matches?lottery_game_id=1",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"lottery_game_matches"
+					],
+					"query": [
+						{
+							"key": "lottery_game_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create match",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"gameId\": \"20\",\n    \"startDate\": \"2024-01-29\",\n    \"startTime\": \"13:30:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lottery}}/api/lottery_game_matches?lottery_game_id=1",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_matches"
+							],
+							"query": [
+								{
+									"key": "lottery_game_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 12:06:54 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Forbidden. You are not an admin\"\n}"
+				}
+			]
+		},
+		{
+			"name": "finish match",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"matchId\": 102\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{lottery}}/api/lottery_game_matches",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"lottery_game_matches"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "finish match",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"matchId\": 102\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lottery}}/api/lottery_game_matches",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_matches"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 12:07:11 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Forbidden. You are not an admin\"\n}"
+				}
+			]
+		},
+		{
+			"name": "sing up for a match",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"matchId\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{lottery}}/api/lottery_game_match_users",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"lottery_game_match_users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sing up for a match",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"matchId\": 102\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lottery}}/api/lottery_game_match_users",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_match_users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 12:07:30 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Validation errors\",\n    \"data\": {\n        \"errors\": {\n            \"matchId\": [\n                \"The selected match id is invalid.\"\n            ]\n        }\n    }\n}"
+				},
+				{
+					"name": "sing up for a match",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"matchId\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{lottery}}/api/lottery_game_match_users",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_match_users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 12:07:49 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 100,\n        \"lottery_game_match_id\": 100,\n        \"user_id\": 102\n    },\n    \"message\": \"You have been signed up for this match successfully.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get matches of game",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{lottery}}/api/lottery_game_matches?lottery_game_id=1020",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"lottery_game_matches"
+					],
+					"query": [
+						{
+							"key": "lottery_game_id",
+							"value": "1020"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get matches of game",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lottery}}/api/lottery_game_matches?lottery_game_id=1",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_matches"
+							],
+							"query": [
+								{
+									"key": "lottery_game_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 12:08:04 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 6,\n            \"game_id\": 1,\n            \"start_time\": \"01:21:39\",\n            \"start_date\": \"2014-12-14\",\n            \"winner_id\": 25\n        },\n        {\n            \"id\": 24,\n            \"game_id\": 1,\n            \"start_time\": \"03:35:32\",\n            \"start_date\": \"1977-11-16\",\n            \"winner_id\": 33\n        },\n        {\n            \"id\": 55,\n            \"game_id\": 1,\n            \"start_time\": \"22:04:52\",\n            \"start_date\": \"2018-11-02\",\n            \"winner_id\": 99\n        },\n        {\n            \"id\": 95,\n            \"game_id\": 1,\n            \"start_time\": \"11:45:51\",\n            \"start_date\": \"2006-04-17\",\n            \"winner_id\": 5\n        }\n    ],\n    \"message\": \"Data retrieved successfully\"\n}"
+				},
+				{
+					"name": "get matches of game",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lottery}}/api/lottery_game_matches?lottery_game_id=1020",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"lottery_game_matches"
+							],
+							"query": [
+								{
+									"key": "lottery_game_id",
+									"value": "1020"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 12:08:15 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Validation errors\",\n    \"data\": {\n        \"errors\": {\n            \"lottery_game_id\": [\n                \"The selected lottery game id is invalid.\"\n            ]\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{lottery}}/api/users",
+					"host": [
+						"{{lottery}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{lottery}}/api/users",
+							"host": [
+								"{{lottery}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 Jan 2024 12:08:29 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Forbidden. You are not an admin\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	]
+}
